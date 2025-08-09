@@ -4,6 +4,7 @@ import com.sandalliyasarcan.controller.ICustomerController;
 import com.sandalliyasarcan.dto.customer.CustomerRequest;
 import com.sandalliyasarcan.dto.customer.CustomerResponse;
 import com.sandalliyasarcan.services.ICustomerService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class CustomerControllerImpl implements ICustomerController {
 
     @Override
     @PostMapping(path = "/save")
-    public CustomerResponse saveCustomer(@RequestBody CustomerRequest customerRequest) {
+    public CustomerResponse saveCustomer(@RequestBody @Valid CustomerRequest customerRequest) {
         return customerService.saveCustomer(customerRequest);
     }
 

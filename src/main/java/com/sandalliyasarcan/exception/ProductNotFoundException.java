@@ -1,4 +1,4 @@
-package com.sandalliyasarcan.exceptiıon;
+package com.sandalliyasarcan.exception;
 
 public class ProductNotFoundException extends RuntimeException {
     public ProductNotFoundException(String message)  {

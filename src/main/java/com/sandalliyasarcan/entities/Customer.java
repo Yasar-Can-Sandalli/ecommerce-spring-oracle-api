@@ -32,7 +32,7 @@ public class Customer extends BaseEntity {
     @Column(name = "address" , nullable = false)
     private String address;
 
-    @Column(name = "postal_code" , nullable = false)
+    @Column(name = "postal_code" , nullable = false )
     private String postalCode;
 
     @Column(name = "city" , nullable = false , length = 30)
@@ -47,6 +47,9 @@ public class Customer extends BaseEntity {
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<PhoneNumber> phoneNumbers = new ArrayList<>();
 
-
+    //Iliskinin Sahibi - Main Entity
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "profile_id", unique = true , nullable = false)
+    private Profile profile;
 
 }

@@ -1,4 +1,4 @@
-package com.sandalliyasarcan.exceptiıon;
+package com.sandalliyasarcan.exception;
 
 public class OrderNotFoundException extends RuntimeException {
     public OrderNotFoundException(String message) {

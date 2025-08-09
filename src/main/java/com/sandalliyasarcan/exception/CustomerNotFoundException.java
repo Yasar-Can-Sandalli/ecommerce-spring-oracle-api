@@ -1,4 +1,4 @@
-package com.sandalliyasarcan.exceptiıon;
+package com.sandalliyasarcan.exception;
 
 public class CustomerNotFoundException extends RuntimeException {
     public CustomerNotFoundException(String message) {
