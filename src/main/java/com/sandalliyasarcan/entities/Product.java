@@ -34,7 +34,7 @@ public class Product extends BaseEntity {
     private Integer unitsInStock;
 
     @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false) //Bu anatasyonu bilmiyorum daha dogrusu iliski anotasyonlarini bilmiyorum ben mappedBy gormustum birkez o farkli sanrim  ,bunlara bereber Caliscaz Chat GPT !!
+    @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
     @Column(name = "brand" , nullable = false , length = 30)
